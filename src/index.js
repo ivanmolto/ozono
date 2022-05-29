@@ -1,21 +1,43 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { createClient, Provider, dedupExchange, fetchExchange } from "urql";
+import { cacheExchange } from "@urql/exchange-graphcache";
+import { simplePagination } from "@urql/exchange-graphcache/extras";
+
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const client = new ApolloClient({
-  uri: "https://mw.graphql.knn3.xyz/",
-  cache: new InMemoryCache(),
+const client = createClient({
+  url: "https://mw.graphql.knn3.xyz",
+  exchanges: [
+    dedupExchange,
+    cacheExchange({
+      resolvers: {
+        Query: {
+          addrsAttend: simplePagination(),
+        },
+      },
+      keys: {
+        AddrsAttendAggregate: (data) => data.count,
+        AddrsAttend: (data) => data.address,
+        Addr: () => null,
+        EventAddrAddrsAttendAggregationSelection: () => null,
+      },
+    }),
+    fetchExchange,
+  ],
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+    <BrowserRouter>
+      <Provider value={client}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

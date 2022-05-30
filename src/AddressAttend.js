@@ -66,7 +66,6 @@ const AddressAttend = ({ variables }) => {
                   </div>
                 ))}
               </ul>
-              {/* Pagination */}
             </div>
           </div>
         </div>

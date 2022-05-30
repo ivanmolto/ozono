@@ -140,7 +140,7 @@ const Layout = () => {
                         </CustomLink>
                         <a
                           key="GitHub"
-                          href="https://github.com/ozono"
+                          href="https://github.com/ivanmolto/ozono"
                           className="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-white hover:text-white hover:bg-sky-600"
                         >
                           <BookOpenIcon
@@ -212,7 +212,7 @@ const Layout = () => {
                   </CustomLink>
                   <a
                     key="GitHub"
-                    href="https://github.com/ozono"
+                    href="https://github.com/ivanmolto/ozono"
                     className="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-white hover:text-white hover:bg-sky-600"
                   >
                     <BookOpenIcon

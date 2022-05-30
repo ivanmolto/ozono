@@ -107,7 +107,7 @@ const Layout = () => {
                             className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                             aria-hidden="true"
                           />
-                          Web3 Profile
+                          Web3 User
                         </CustomLink>
                       </ul>
                       <ul>
@@ -154,9 +154,7 @@ const Layout = () => {
                   </nav>
                 </Dialog.Panel>
               </Transition.Child>
-              <div className="flex-shrink-0 w-14" aria-hidden="true">
-                {/* Dummy element to force sidebar to shrink to fit close icon */}
-              </div>
+              <div className="flex-shrink-0 w-14" aria-hidden="true"></div>
             </div>
           </Dialog>
         </Transition.Root>
@@ -179,7 +177,7 @@ const Layout = () => {
                       className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                       aria-hidden="true"
                     />
-                    Web3 Profile
+                    Web3 User
                   </CustomLink>
                 </ul>
                 <ul>

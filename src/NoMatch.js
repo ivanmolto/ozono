@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 
 const NoMatch = () => {
   return (
@@ -20,8 +21,12 @@ const NoMatch = () => {
             <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
               <Link
                 to="/"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-400 hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-400"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-400 hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-400"
               >
+                <ArrowCircleLeftIcon
+                  className="-ml-1 mr-3 h-5 w-5"
+                  aria-hidden="true"
+                />
                 Go back home
               </Link>
             </div>

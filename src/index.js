@@ -17,13 +17,20 @@ const client = createClient({
       resolvers: {
         Query: {
           addrsAttend: simplePagination(),
+          addrsHold: simplePagination(),
+          holdnfts: simplePagination(),
+          attendEvents: simplePagination(),
         },
       },
       keys: {
-        AddrsAttendAggregate: (data) => data.count,
-        AddrsAttend: (data) => data.address,
         Addr: () => null,
+        NFT: () => null,
         EventAddrAddrsAttendAggregationSelection: () => null,
+        NFTAddrAddrsHoldAggregationSelection: () => null,
+        AddrAddrAddrsFollowAggregationSelection: () => null,
+        AddrAddrFollowAddrsAggregationSelection: () => null,
+        AddrNFTHoldnftsAggregationSelection: () => null,
+        AddrEventAttendEventsAggregationSelection: () => null,
       },
     }),
     fetchExchange,

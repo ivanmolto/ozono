@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import Wallets from "./Wallets";
+import WalletProfiler from "./WalletProfiler";
+import Wallet from "./Wallet";
+import Collections from "./Collections";
+import CollectionProfiler from "./CollectionProfiler";
+import Collection from "./Collection";
+import Nft from "./Nfts";
+import Events from "./Events";
+import EventProfiler from "./EventProfiler";
+import Event from "./Event";
+import NoMatch from "./NoMatch";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="wallets" element={<Wallets />}>
+          <Route index element={<WalletProfiler />} />
+          <Route path=":walletId" element={<Wallet />}></Route>
+        </Route>
+        <Route path="collections" element={<Collections />}>
+          <Route index element={<CollectionProfiler />} />
+          <Route path=":collectionId" element={<Collection />}>
+            <Route path=":nftId" element={<Nft />} />
+          </Route>
+        </Route>
+        <Route path="events" element={<Events />}>
+          <Route index element={<EventProfiler />} />
+          <Route path=":eventId" element={<Event />} />
+        </Route>
+        <Route path="*" element={<NoMatch />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

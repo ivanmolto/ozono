@@ -47,7 +47,7 @@ const Users = ({ addressId }) => {
       {data?.addrs.map((user) => (
         <div key={user.address} className="bg-white shadow">
           <div className="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
-            <div className="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200">
+            <div className="py-6 -mt-1 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center">
                   <div>

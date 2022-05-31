@@ -19,11 +19,18 @@ const AddressAttend = ({ variables }) => {
   const [result] = useQuery({ query, variables });
   const { data, fetching, error } = result;
 
-  if (fetching || data === undefined) return <p>Loading...</p>;
+  if (fetching || data === undefined)
+    return (
+      <div className="shadow sm:hidden font-montserrat">
+        <ul className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
+          <p>Loading...</p>
+        </ul>
+      </div>
+    );
   if (error) return <p>{error.message}</p>;
   return (
     <>
-      <div className="shadow sm:hidden">
+      <div className="shadow sm:hidden font-montserrat">
         <ul className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
           {data?.events.map((audience, ind) => (
             <div key={ind}>
@@ -44,7 +51,7 @@ const AddressAttend = ({ variables }) => {
           ))}
         </ul>
       </div>
-      <div className="hidden sm:block">
+      <div className="hidden sm:block font-montserrat">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col mt-2">
             <div className="align-middle min-w-full overflow-x-auto shadow-sm overflow-hidden sm:rounded-lg">

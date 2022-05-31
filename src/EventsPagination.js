@@ -2,8 +2,7 @@ import { useState } from "react";
 import Poaps from "./Poaps";
 import AddressAttend from "./AddressAttend";
 
-const EventsPagination = ({ count }) => {
-  const eventId = "43064";
+const EventsPagination = ({ count, eventId }) => {
   let offset = 0;
   const limit = 20;
 

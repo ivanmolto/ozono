@@ -3,7 +3,6 @@ import Nfts from "./Nfts";
 import AddressHold from "./AddressHold";
 
 const CollectionsPagination = ({ count, contractId }) => {
-  // const contractId = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d";
   let offset = 0;
   const limit = 20;
 

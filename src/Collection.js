@@ -4,12 +4,10 @@ import CollectionsPagination from "./CollectionsPagination";
 
 const Collection = () => {
   let params = useParams();
-  console.log(params.contractId);
 
   const contractId = params.contractId;
-  console.log(contractId);
+
   const variables = { contract: contractId };
-  console.log(variables);
 
   const PAGINATION_QUERY = gql`
     query ($contract: String) {

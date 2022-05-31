@@ -102,30 +102,30 @@ const Layout = () => {
                   >
                     <div className="px-2 space-y-1">
                       <ul>
-                        <CustomLink to="/wallets">
+                        <CustomLink to="/walletprofiler">
                           <FireIcon
                             className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                             aria-hidden="true"
                           />
-                          Web3 User
+                          Web3 User Profiler
                         </CustomLink>
                       </ul>
                       <ul>
-                        <CustomLink to="/collections">
+                        <CustomLink to="/collectionprofiler">
                           <CollectionIcon
                             className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                             aria-hidden="true"
                           />
-                          NFT Collections
+                          NFT Collection Profiler
                         </CustomLink>
                       </ul>
                       <ul>
-                        <CustomLink to="/events">
+                        <CustomLink to="/eventprofiler">
                           <StarIcon
                             className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                             aria-hidden="true"
                           />
-                          Events
+                          Event Profiler
                         </CustomLink>
                       </ul>
                     </div>
@@ -172,30 +172,30 @@ const Layout = () => {
             >
               <div className="px-2 space-y-1">
                 <ul>
-                  <CustomLink to="/wallets">
+                  <CustomLink to="/walletprofiler">
                     <FireIcon
                       className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                       aria-hidden="true"
                     />
-                    Web3 User
+                    Web3 User Profiler
                   </CustomLink>
                 </ul>
                 <ul>
-                  <CustomLink to="/collections">
+                  <CustomLink to="/collectionprofiler">
                     <CollectionIcon
                       className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                       aria-hidden="true"
                     />
-                    NFT Collections
+                    NFT Collection Profiler
                   </CustomLink>
                 </ul>
                 <ul>
-                  <CustomLink to="/events">
+                  <CustomLink to="/eventprofiler">
                     <StarIcon
                       className="mr-4 flex-shrink-0 h-6 w-6 text-white"
                       aria-hidden="true"
                     />
-                    Events
+                    Event Profiler
                   </CustomLink>
                 </ul>
               </div>

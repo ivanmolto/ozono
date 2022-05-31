@@ -16,7 +16,6 @@ const HOLD_QUERY = gql`
 const query = HOLD_QUERY;
 
 const HoldNfts = ({ variables }) => {
-  console.log(variables);
   const [result] = useQuery({ query, variables });
   const { data, fetching, error } = result;
 

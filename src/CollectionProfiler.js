@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 const CollectionProfiler = () => {
   const [collection, setCollection] = useState("");
   let navigate = useNavigate();
+  console.log(collection);
 
   const collectionChangeHandler = (event) => {
-    setCollection(event.target.value);
+    setCollection(event.target.value.toLowerCase());
   };
 
   async function submitHandler(event) {

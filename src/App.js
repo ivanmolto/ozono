@@ -26,7 +26,7 @@ const App = () => {
         <Route path="collectionprofiler" element={<CollectionProfiler />} />
         <Route path="collections" element={<Collections />}>
           <Route index element={<CollectionProfiler />} />
-          <Route path=":collectionId" element={<Collection />}>
+          <Route path=":contractId" element={<Collection />}>
             <Route path=":nftId" element={<Nft />} />
           </Route>
         </Route>

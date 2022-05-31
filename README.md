@@ -1,7 +1,14 @@
 # OZONO
 
 A Web3 social discovery app powered by KNN3.
+
 Unleash your Web3 social marketing power - a tool to make it easy -
+
+This application has been created for ETH Shanghai Hackathon for one of the challenges sponsored by [KNN3](https://www.knn3.xyz)
+
+Please feel free to contact me at my email: ivanmolto@gmail.com or via Discord at ivanmolto#3768
+
+Thank you!
 
 ## SETUP
 

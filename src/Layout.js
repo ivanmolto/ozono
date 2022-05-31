@@ -11,6 +11,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import knn3 from "./knn3.svg";
+import ozono from "./ozono.svg";
 
 function CustomLink({ children, to, ...props }) {
   let resolved = useResolvedPath(to);
@@ -93,9 +94,7 @@ const Layout = () => {
                     </div>
                   </Transition.Child>
                   <div className="flex-shrink-0 flex items-center px-4">
-                    <div className="font-montserrat text-3xl font-extrabold">
-                      OZONO
-                    </div>
+                    <img src={ozono} alt="ozono" />
                   </div>
                   <nav
                     className="mt-5 flex-shrink-0 h-full divide-y divide-sky-800 overflow-y-auto"
@@ -163,9 +162,7 @@ const Layout = () => {
         <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
           <div className="flex flex-col flex-grow bg-sky-400 pt-5 pb-4 overflow-y-auto ">
             <div className="flex items-center flex-shrink-0 px-4">
-              <div className="font-montserrat text-3xl font-extrabold">
-                OZONO
-              </div>
+              <img src={ozono} alt="ozono" />
             </div>
             <nav
               className="mt-5 flex-1 flex flex-col divide-y divide-sky-800 overflow-y-auto"

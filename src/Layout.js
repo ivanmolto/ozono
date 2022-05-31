@@ -10,6 +10,7 @@ import {
   CollectionIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import knn3 from "./knn3.svg";
 
 function CustomLink({ children, to, ...props }) {
   let resolved = useResolvedPath(to);
@@ -211,6 +212,8 @@ const Layout = () => {
                   <a
                     key="GitHub"
                     href="https://github.com/ivanmolto/ozono"
+                    rel="noreferrer"
+                    target="_blank"
                     className="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-white hover:text-white hover:bg-sky-600"
                   >
                     <BookOpenIcon
@@ -223,7 +226,13 @@ const Layout = () => {
               </div>
             </nav>
             <div className="flex-shrink-0 flex justify-around items-center px-4">
-              Powered by KNN3
+              <a href="https://www.knn3.xyz" rel="noreferrer" target="_blank">
+                <img
+                  className="h-4/5 w-4/5"
+                  src={knn3}
+                  alt="Powered by Covalent"
+                />
+              </a>
             </div>
           </div>
         </div>

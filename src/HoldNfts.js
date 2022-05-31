@@ -1,4 +1,5 @@
 import { gql, useQuery } from "urql";
+import { Link } from "react-router-dom";
 
 const HOLD_QUERY = gql`
   query ($address: String, $limit: Int, $offset: Int) {
@@ -55,24 +56,41 @@ const HoldNfts = ({ variables }) => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col mt-2">
             <div className="align-middle min-w-full overflow-x-auto shadow-sm overflow-hidden sm:rounded-lg">
-              <ul className="min-w-full divide-y divide-gray-200">
+              <div className="min-w-full divide-y divide-gray-200">
                 {data?.addrs.map((holder, ind) => (
-                  <div key={ind}>
+                  <ul
+                    key={ind}
+                    className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+                  >
                     {holder.holdnfts.map((collection, index) => (
-                      <li
-                        key={index}
-                        className="bg-white border-2 border-gray-100 hover:bg-gray-50"
-                      >
-                        <div className="group inline-flex space-x-2 truncate text-sm ">
-                          <div className="text-gray-500 truncate group-hover:text-gray-900 ">
-                            {collection.contract}
-                          </div>
+                      <li key={index} className="relative">
+                        <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+                          <img
+                            src={collection?.imageUrl}
+                            alt={collection.symbol}
+                            className="object-cover pointer-events-none group-hover:opacity-75"
+                          />
+                          <Link
+                            to={`/collections/${collection.contract}`}
+                            type="button"
+                            className="absolute inset-0 focus:outline-none"
+                          >
+                            <span className="sr-only">
+                              View details for {collection.symbol}
+                            </span>
+                          </Link>
                         </div>
+                        <p className="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
+                          {collection.symbol}
+                        </p>
+                        <p className="block text-sm font-medium text-gray-500 pointer-events-none truncate">
+                          {collection.contract}
+                        </p>
                       </li>
                     ))}
-                  </div>
+                  </ul>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

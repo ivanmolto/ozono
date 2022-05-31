@@ -1,4 +1,5 @@
 import { gql, useQuery } from "urql";
+import { Link } from "react-router-dom";
 
 const ATTEND_QUERY = gql`
   query ($id: String, $limit: Int, $offset: Int) {
@@ -36,15 +37,17 @@ const AddressAttend = ({ variables }) => {
             <div key={ind}>
               {audience.addrsAttend.map((user, index) => (
                 <li key={index}>
-                  <div className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-50">
-                    <div className="flex items-center space-x-4 ">
-                      <div className="flex-1 flex space-x-2 truncate ">
-                        <div className="flex flex-col text-gray-500 text-sm  truncate">
-                          <div className="truncate">{user.address}</div>
+                  <Link to={`/wallets/${user.address}`}>
+                    <div className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-50">
+                      <div className="flex items-center space-x-4 ">
+                        <div className="flex-1 flex space-x-2 truncate ">
+                          <div className="flex flex-col text-gray-500 text-sm  truncate">
+                            <div className="truncate">{user.address}</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               ))}
             </div>
@@ -63,11 +66,13 @@ const AddressAttend = ({ variables }) => {
                         key={index}
                         className="bg-white border-2 border-gray-100 hover:bg-gray-50"
                       >
-                        <div className="group inline-flex space-x-2 truncate text-sm ">
-                          <div className="text-gray-500 truncate group-hover:text-gray-900 ">
-                            {user.address}
+                        <Link to={`/wallets/${user.address}`}>
+                          <div className="group inline-flex space-x-2 truncate text-sm ">
+                            <div className="text-gray-500 truncate group-hover:text-gray-900 ">
+                              {user.address}
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </li>
                     ))}
                   </div>

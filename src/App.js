@@ -21,7 +21,7 @@ const App = () => {
         <Route path="walletprofiler" element={<WalletProfiler />} />
         <Route path="wallets" element={<Wallets />}>
           <Route index element={<WalletProfiler />} />
-          <Route path=":walletId" element={<Wallet />}></Route>
+          <Route path=":addressId" element={<Wallet />}></Route>
         </Route>
         <Route path="collectionprofiler" element={<CollectionProfiler />} />
         <Route path="collections" element={<Collections />}>

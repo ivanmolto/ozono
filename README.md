@@ -34,7 +34,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## USAGE
 
-You can profile Users/Wwallets, NFT collections and POAP events.
+You can profile Users/Wallets, NFT collections and POAP events.
 
 ## LICENSE
 

@@ -18,16 +18,19 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="walletprofiler" element={<WalletProfiler />} />
         <Route path="wallets" element={<Wallets />}>
           <Route index element={<WalletProfiler />} />
           <Route path=":walletId" element={<Wallet />}></Route>
         </Route>
+        <Route path="collectionprofiler" element={<CollectionProfiler />} />
         <Route path="collections" element={<Collections />}>
           <Route index element={<CollectionProfiler />} />
           <Route path=":collectionId" element={<Collection />}>
             <Route path=":nftId" element={<Nft />} />
           </Route>
         </Route>
+        <Route path="eventprofiler" element={<EventProfiler />} />
         <Route path="events" element={<Events />}>
           <Route index element={<EventProfiler />} />
           <Route path=":eventId" element={<Event />} />

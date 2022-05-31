@@ -8,6 +8,8 @@ This application has been created for ETH Shanghai Hackathon for one of the chal
 
 Please feel free to contact me at my email: ivanmolto@gmail.com or via Discord at ivanmolto#3768
 
+The application is live at [ozono.app](https://www.ozono.app)
+
 Thank you!
 
 ## SETUP
@@ -33,8 +35,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 ## USAGE
 
 You can profile Users/Wwallets, NFT collections and POAP events.
-
-## VIDEO DEMO
 
 ## LICENSE
 

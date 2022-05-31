@@ -2,8 +2,8 @@ import { useState } from "react";
 import Nfts from "./Nfts";
 import AddressHold from "./AddressHold";
 
-const PaginationCollections = ({ count }) => {
-  const contractId = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d";
+const CollectionsPagination = ({ count, contractId }) => {
+  // const contractId = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d";
   let offset = 0;
   const limit = 20;
 
@@ -43,7 +43,7 @@ const PaginationCollections = ({ count }) => {
                           {
                             offset: pageVariables.length * limit,
                             limit,
-                            id: contractId,
+                            contract: contractId,
                           },
                         ])
                       }
@@ -60,4 +60,4 @@ const PaginationCollections = ({ count }) => {
     </>
   );
 };
-export default PaginationCollections;
+export default CollectionsPagination;

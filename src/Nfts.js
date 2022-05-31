@@ -33,8 +33,8 @@ const Nfts = ({ contractId }) => {
   if (error) return <p>{error.message}</p>;
   return (
     <>
-      {data?.nfts.map((nft, index) => (
-        <div key={nft.index} className="bg-white shadow">
+      {data?.nfts.map((nft) => (
+        <div key={nft.contract} className="bg-white shadow">
           <div className="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
             <div className="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200">
               <div className="flex-1 min-w-0">
@@ -51,9 +51,9 @@ const Nfts = ({ contractId }) => {
                         src={nft.imageUrl}
                         alt={nft.symbol}
                       />
-                      <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:leading-9 sm:truncate">
+                      <h2 className="ml-3 text-xs sm:text-base font-semibold leading-7 text-gray-900 sm:leading-9 sm:truncate">
                         {nft.contract}
-                      </h1>
+                      </h2>
                     </div>
                     <dl className="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
                       <dt className="sr-only">Nft Collection</dt>

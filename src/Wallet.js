@@ -41,6 +41,18 @@ const Wallet = () => {
     );
 
   if (error) return <p>{error.message}</p>;
+  if (data?.addrs.length === 0)
+    return (
+      <div className="min-h-full font-montserrat">
+        <main className="flex-1 pb-8">
+          <div className="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
+            <h2 className="font-bold text-xl">Web3 User Profile</h2>
+            <div className="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200"></div>
+            Sorry, no data available for {params.addressId}
+          </div>
+        </main>
+      </div>
+    );
 
   return (
     <div className="min-h-full font-montserrat">

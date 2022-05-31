@@ -38,7 +38,7 @@ const AddressAttend = ({ variables }) => {
               {audience.addrsAttend.map((user, index) => (
                 <li key={index}>
                   <Link to={`/wallets/${user.address}`}>
-                    <div className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-50">
+                    <div className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-200">
                       <div className="flex items-center space-x-4 ">
                         <div className="flex-1 flex space-x-2 truncate ">
                           <div className="flex flex-col text-gray-500 text-sm  truncate">

@@ -37,15 +37,23 @@ const AttendEvents = ({ variables }) => {
             <div key={ind}>
               {participant.attendEvents.map((event, index) => (
                 <li key={index}>
-                  <div className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-50">
+                  <Link
+                    to={`/events/${event.id}`}
+                    className="block px-4 py-4 bg-white hover:bg-gray-50 border-2 border-gray-50"
+                  >
                     <div className="flex items-center space-x-4 ">
-                      <div className="flex-1 flex space-x-2 truncate ">
+                      <div className="flex-1 flex items-center space-x-2 truncate ">
+                        <img
+                          className="h-20 w-20 rounded-full sm:hidden"
+                          src={event.imageUrl}
+                          alt={event.id}
+                        />
                         <div className="flex flex-col text-gray-500 text-sm  truncate">
-                          <div className="truncate">{event.id}</div>
+                          <div className="truncate">{event.name}</div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               ))}
             </div>
@@ -66,13 +74,12 @@ const AttendEvents = ({ variables }) => {
                       <li key={index} className="relative">
                         <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
                           <img
-                            src={event?.imageUrl}
+                            src={event.imageUrl}
                             alt={event.name}
                             className="object-cover pointer-events-none group-hover:opacity-75"
                           />
                           <Link
                             to={`/events/${event.id}`}
-                            type="button"
                             className="absolute inset-0 focus:outline-none"
                           >
                             <span className="sr-only">

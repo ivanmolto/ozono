@@ -47,11 +47,11 @@ const Poaps = ({ eventId }) => {
                   <div>
                     <div className="flex items-center">
                       <img
-                        className="h-16 w-16 rounded-full sm:hidden"
+                        className="h-20 w-20 rounded-full sm:hidden"
                         src={poap.imageUrl}
                         alt={poap.name}
                       />
-                      <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:leading-9 sm:truncate">
+                      <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:leading-9 truncate">
                         {poap.name}
                       </h1>
                     </div>

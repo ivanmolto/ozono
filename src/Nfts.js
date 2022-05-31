@@ -47,11 +47,11 @@ const Nfts = ({ contractId }) => {
                   <div>
                     <div className="flex items-center">
                       <img
-                        className="h-16 w-16 rounded-full sm:hidden"
+                        className="h-20 w-20 rounded-full sm:hidden"
                         src={nft.imageUrl}
                         alt={nft.symbol}
                       />
-                      <h2 className="ml-3 text-xs sm:text-base font-semibold leading-7 text-gray-900 sm:leading-9 sm:truncate">
+                      <h2 className="ml-3 text-base sm:text-base  font-normal sm:font-semibold leading-7 text-gray-900 sm:leading-9 truncate">
                         {nft.contract}
                       </h2>
                     </div>

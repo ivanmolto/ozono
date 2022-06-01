@@ -12,6 +12,12 @@ The application is live at [ozono.app](https://www.ozono.app)
 
 Thank you!
 
+## PRESENTATION AND VIDEO
+
+[Please find here the Ozono's presentation](https://github.com/ivanmolto/ozono/blob/master/ozono-presentation.pdf)
+
+[And here a short video](https://youtu.be/co4I9sqRF3Y)
+
 ## SETUP
 
 This application uses the [GraphQL endpoint](https://mw.graphql.knn3.xyz) from KNN3.

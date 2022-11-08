@@ -28,7 +28,6 @@ const HoldNfts = ({ variables }) => {
       </div>
     );
   if (error) return <p>{error.message}</p>;
-  else console.log(data.addrs[0].holdNfts);
   return (
     <>
       <div className="shadow sm:hidden font-montserrat">

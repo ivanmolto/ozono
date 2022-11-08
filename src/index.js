@@ -18,7 +18,7 @@ const client = createClient({
         Query: {
           addrsAttend: simplePagination(),
           addrsHold: simplePagination(),
-          holdnfts: simplePagination(),
+          holdNfts: simplePagination(), //
           attendEvents: simplePagination(),
         },
       },

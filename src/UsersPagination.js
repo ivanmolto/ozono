@@ -6,7 +6,6 @@ import AttendedEvents from "./AttendEvents";
 const UsersPagination = ({ addressId, nftcount, poapcount }) => {
   let offset = 0;
   const limit = 20;
-  console.log(addressId);
 
   const nftpagination = Math.floor(nftcount / limit);
   const poappagination = Math.floor(poapcount / limit);

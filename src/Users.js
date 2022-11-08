@@ -3,7 +3,6 @@ import { UserAddIcon, UserGroupIcon } from "@heroicons/react/outline";
 
 const Users = ({ addressId }) => {
   const variables = { address: addressId };
-  console.log(variables);
   const USER_QUERY = gql`
     query ($address: String) {
       addrs(where: { address: $address }) {
@@ -15,7 +14,7 @@ const Users = ({ addressId }) => {
         followAddrsAggregate {
           count
         }
-        holdnftsAggregate {
+        holdNftsAggregate {
           count
         }
         attendEventsAggregate {

@@ -28,6 +28,11 @@ const UsersPagination = ({ addressId, nftcount, poapcount }) => {
         <h2 className="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
           NFT Balance
         </h2>
+        {nftcount === 0 && (
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            Sorry, no NFT data available
+          </div>
+        )}
         {pageVariablesNft.map((variables, i) => (
           <HoldNfts key={i} variables={variables} />
         ))}
@@ -67,6 +72,11 @@ const UsersPagination = ({ addressId, nftcount, poapcount }) => {
         <h2 className="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
           POAPs Balance
         </h2>
+        {poapcount === 0 && (
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            Sorry, no POAP data available
+          </div>
+        )}
         {pageVariablesPoap.map((variables, i) => (
           <AttendedEvents key={i} variables={variables} />
         ))}

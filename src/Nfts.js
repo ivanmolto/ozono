@@ -41,7 +41,10 @@ const Nfts = ({ contractId }) => {
                 <div className="flex items-center">
                   <img
                     className="hidden h-64 w-64 rounded-full sm:block"
-                    src={nft.imageUrl}
+                    src={
+                      nft.imageUrl ||
+                      `https://ivanmolto.mypinata.cloud/ipfs/QmVQbvN165VywQ4dYnWysfF5L3VNyB4koBAY189pw3Wvax`
+                    }
                     alt={nft.symbol}
                   />
                   <div>

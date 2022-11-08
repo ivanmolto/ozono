@@ -16,7 +16,7 @@ const EventProfiler = () => {
   }
 
   return (
-    <div class="font-montserrat">
+    <div className="font-montserrat">
       <main className="flex-1 flex-col pb-8">
         <div className="mt-1">
           <h2 className="max-w-6xl mx-auto mt-0 px-4 text-lg leading-6 font-inter font-medium text-sky-400 sm:px-6 lg:px-8">

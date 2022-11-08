@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="flow-root">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-16 w-16 mx-auto"
+                    className="h-16 w-16 mx-auto"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="flow-root">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-16 w-16 mx-auto"
+                    className="h-16 w-16 mx-auto"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

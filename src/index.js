@@ -10,7 +10,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const client = createClient({
-  url: "https://mw.graphql.knn3.xyz",
+  url: "https://master.graphql.knn3.xyz/graphql",
   exchanges: [
     dedupExchange,
     cacheExchange({
@@ -25,6 +25,16 @@ const client = createClient({
       keys: {
         Addr: () => null,
         NFT: () => null,
+        Nft: () => null, //
+        AddrAttendAggregate: () => null,
+        AddressHoldCount: () => null,
+        Address: () => null,
+        NftsAggregate: () => null,
+        AttendEventsAggregate: () => null,
+        AddrsFollowAggregat: () => null,
+        AddrsFollowAggregate: () => null,
+        FollowAddrsAggregate: () => null,
+        HoldNftCount: () => null, //
         EventAddrAddrsAttendAggregationSelection: () => null,
         NFTAddrAddrsHoldAggregationSelection: () => null,
         AddrAddrAddrsFollowAggregationSelection: () => null,

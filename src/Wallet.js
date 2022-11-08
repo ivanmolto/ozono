@@ -13,7 +13,7 @@ const Wallet = () => {
     query ($address: String) {
       addrs(where: { address: $address }) {
         address
-        holdnftsAggregate {
+        holdNftsAggregate {
           count
         }
         attendEventsAggregate {
@@ -64,7 +64,7 @@ const Wallet = () => {
           <UsersPagination
             key={ind}
             addressId={addressId}
-            nftcount={wallet.holdnftsAggregate.count}
+            nftcount={wallet.holdNftsAggregate.count}
             poapcount={wallet.attendEventsAggregate.count}
           />
         ))}

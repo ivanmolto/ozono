@@ -105,7 +105,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-gray-500">
                   Start answering questions about events.
                   <br />
-                  Discover and target audiences and trends.
+                  Discover donations and governance trends.
                 </p>
               </div>
             </div>

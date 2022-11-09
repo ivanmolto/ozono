@@ -11,6 +11,12 @@ import Nft from "./Nfts";
 import Events from "./Events";
 import EventProfiler from "./EventProfiler";
 import Event from "./Event";
+import Donations from "./Donations";
+import DonationProfiler from "./DonationProfiler";
+import Donation from "./Donation";
+import Governance from "./Governance";
+import GovernanceProfiler from "./GovernanceProfiler";
+import Governances from "./Governances";
 import NoMatch from "./NoMatch";
 
 const App = () => {
@@ -34,6 +40,16 @@ const App = () => {
         <Route path="events" element={<Events />}>
           <Route index element={<EventProfiler />} />
           <Route path=":eventId" element={<Event />} />
+        </Route>
+        <Route path="donationprofiler" element={<DonationProfiler />} />
+        <Route path="donations" element={<Donations />}>
+          <Route index element={<DonationProfiler />} />
+          <Route path=":donationId" element={<Donation />} />
+        </Route>
+        <Route path="governanceprofiler" element={<GovernanceProfiler />} />
+        <Route path="governances" element={<Governances />}>
+          <Route index element={<GovernanceProfiler />} />
+          <Route path=":governanceId" element={<Governance />} />
         </Route>
         <Route path="*" element={<NoMatch />} />
       </Route>

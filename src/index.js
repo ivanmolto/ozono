@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import { createClient, Provider, dedupExchange, fetchExchange } from "urql";
 import { cacheExchange } from "@urql/exchange-graphcache";
 import { simplePagination } from "@urql/exchange-graphcache/extras";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+const queryClient = new QueryClient();
 
 const client = createClient({
   url: "https://master.graphql.knn3.xyz/graphql",
@@ -52,7 +55,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider value={client}>
-        <App />
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

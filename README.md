@@ -5,7 +5,7 @@ A Web3 social discovery app powered by KNN3.
 Unleash your Web3 social marketing power - a tool to make it easy -
 
 This application was created for ETH Shanghai Hackathon some months ago. It was one of the winners of the challenges sponsored by [KNN3](https://www.knn3.xyz).
-But it was time for an upgrade and the goal for this bounty was to use the RSS3 API in this existing project.
+But it was time for an upgrade and the goal for this bounty was to use the [RSS3 API](https://docs.rss3.io/reference) in this existing project for the Social Hour Hackathon sponsored by [RSS3](https://rss3.io)
 
 Please feel free to contact me at my email: ivanmolto@gmail.com or via Discord at ivanmolto#3768
 
